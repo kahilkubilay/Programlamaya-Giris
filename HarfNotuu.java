@@ -5,7 +5,11 @@ public class BilgisayarKavramlari {
         System.out.println("Notunuzu giriniz: ");
         Scanner notGir = new Scanner(System.in);
         int not = notGir.nextInt();
-        if(not>=90){
+        notGir.close();
+        if(not > 100 || not < 0){
+            System.ot.println("0-100 arasında bir not giriniz.");
+        }
+        else if(not>=90){
             System.out.println("Harf Notunuz: A");
         }
         else if(not>=80){
