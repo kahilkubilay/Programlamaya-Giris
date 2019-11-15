@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+    <title>Mozilla Developers</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <style type="text/css">
+   
+    </style> 
+
+</head>
+<body>
+
+    <h2>Github Exercise</h2>
+
+    <div id="input">
+        
+        <p>Üretmek istediğiniz sayı miktarını giriniz: </p>
+        <input value="" type="text" name="" id="girilenSayi"></input>
+
+        <button id="üret" onclick="uret( document.getElementById('girilenSayi').value );">Üret</button>
+    </div>
+
+    <script type="text/javascript">
+        
+/*
+      var fib = 1;
+      var lastNumb = 1; 
+      var tempory = 0;
+       
+      function uret( donusDegeri ){
+
+        console.log( fib );
+
+        for( var i = 0 ; i < donusDegeri ; i++ ){
+
+            //tempory = lastNumb;
+
+            fib = tempory + lastNumb;
+
+            tempory = lastNumb;
+
+            lastNumb = fib;
+
+            console.log( fib );
+
+        }
+
+        fib = 0;
+
+      }
+*/
+
+        var fibArr = [1, 1];
+        var fib = 0;
+        var tempory = 0;
+
+        function uret( girilenSayi ){
+
+            for( var i = 1 ; i < girilenSayi ; i++ ){
+
+                fib = fibArr[i-1] + fibArr[i];
+                fibArr.push( fib );
+
+            }
+
+            fibArr.forEach( function( element ){
+
+                console.log( element );
+
+            });
+
+        } 
+        
+
+    </script>
+      
+</body>
+</html>
